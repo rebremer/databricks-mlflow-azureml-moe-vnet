@@ -1,12 +1,15 @@
 ## Databricks-MLflow-AzureML-MoE-Vnet
 
-Project to develop models in Databricks, use MLFlow to register models in AzureML with public access disabled, deploy models as private managed online endpoints using az ml cli v2. See also architecture below:
+Project that enables teams to use Azure Databricks and Azure ML to create secure enpoints as follows:
+- Develop and create models in Azure Databricks
+- Track models with MLflow from Databricks to AzureML. Azure ML is setup with public access disabled
+- Deploy models as private Managed online Endpoints (MoE VNET) using az ml cli v2. 
 
-See also overview below:
+See also architecture below:
 
 ![Architecture](Images/architecture.png)
 
-Git repo is based on [this](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-use-mlflow-azure-databricks?tabs=cli%2Cmlflow#tracking-exclusively-on-azure-machine-learning-workspace) documentation in which models are exclusively logged in Azure ML (single source of truth, only possibility when using Azure ML with public access disabled) and enhances documentation by created managed online endpoints with private endpoints and egress disabled using az cli v2.
+Git repo is based on [this](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-use-mlflow-azure-databricks?tabs=cli%2Cmlflow#tracking-exclusively-on-azure-machine-learning-workspace) documentation in which models are exclusively logged in Azure ML (single source of truth, only possibility when using Azure ML with public access disabled) and enhances documentation by created managed online endpoints with private endpoints and egress disabled.
 
 Steps to take:
 
