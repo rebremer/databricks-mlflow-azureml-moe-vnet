@@ -1,0 +1,25 @@
+#
+# Create model, fetch mlflow_tracking_uri
+#
+az login
+az account set --subscription <<your subscription id>>
+az configure --defaults workspace=<<your Azure ML workspace>> group=<<your resource group>> location=<<your location>>
+az ml workspace show --query mlflow_tracking_uri
+
+#
+# Deploy model, build docker images and publish to ACR
+#
+az login
+cd Docker
+az acr login -n <<your Azure Container Registry>> .
+az acr build -t testrb-mlflow:latest -r <<your Azure Container Registry>> .
+cd ..
+
+#
+# Deploy model, create private endpoints
+#
+az login
+cd MoE
+az ml online-endpoint create -f endpoint.yaml --set public_network_access=disabled
+az ml online-deployment create -f acr-gboost-deployment.yaml --set egress_public_network_access=disabled
+cd ..

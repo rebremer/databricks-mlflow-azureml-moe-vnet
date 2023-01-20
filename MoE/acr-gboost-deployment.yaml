@@ -1,0 +1,20 @@
+$schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.schema.json
+name: priv2-deployment
+endpoint_name: priv-testrb-my-endpoint
+model: azureml:test2-databricks-heart-classifier:1
+environment:
+  image: testdbramlmoeamlacr.azurecr.io/testrb-mlflow:latest
+  inference_config:
+    liveness_route:
+      port: 5001
+      path: /
+    readiness_route:
+      port: 5001
+      path: /
+    scoring_route:
+      port: 5001
+      path: /score
+environment_variables:
+  MLFLOW_MODEL_FOLDER: model
+instance_type: Standard_DS2_v2
+instance_count: 1
