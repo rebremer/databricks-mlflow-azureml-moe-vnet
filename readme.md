@@ -1,6 +1,6 @@
-## Databricks-MLflow-Azureml-MoE-Vnet
+## Databricks-MLflow-AzureML-MoE-Vnet
 
-Project to develop models in Databricks, use MLFlow to register models in AzureML with public access disabled, deploy models as private managed online endpoints. See also architecture below:
+Project to develop models in Databricks, use MLFlow to register models in AzureML with public access disabled, deploy models as private managed online endpoints using az ml cli v2. See also architecture below:
 
 See also overview below:
 
