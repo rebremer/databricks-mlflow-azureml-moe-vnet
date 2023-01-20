@@ -1,6 +1,6 @@
 ## Databricks-MLflow-AzureML-MoE-Vnet
 
-Project that enables teams to use Azure Databricks and Azure ML to create secure enpoints as follows:
+Project that enables teams to use Azure Databricks and Azure ML to create secure endpoints as follows:
 - Develop and create models in Azure Databricks
 - Track models with MLflow from Databricks to AzureML. Azure ML is setup with public access disabled
 - Deploy models as private Managed online Endpoints (MoE VNET) using az ml cli v2. 
