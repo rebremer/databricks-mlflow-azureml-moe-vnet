@@ -3,7 +3,7 @@ name: priv2-deployment
 endpoint_name: priv-testrb-my-endpoint
 model: azureml:test2-databricks-heart-classifier:1
 environment:
-  image: testdbramlmoeamlacr.azurecr.io/testrb-mlflow:latest
+  image: <<your acr name>>.azurecr.io/testrb-mlflow:latest
   inference_config:
     liveness_route:
       port: 5001
