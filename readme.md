@@ -9,7 +9,7 @@ See also architecture below:
 
 ![Architecture](Images/architecture.png)
 
-Git repo is based on [this](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-use-mlflow-azure-databricks?tabs=cli%2Cmlflow#tracking-exclusively-on-azure-machine-learning-workspace) documentation in which models are exclusively logged in Azure ML (single source of truth, only possibility when using Azure ML with public access disabled) and enhances documentation by created managed online endpoints with private endpoints and egress disabled.
+Git repo is based on [this](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-use-mlflow-azure-databricks?tabs=cli%2Cmlflow#tracking-exclusively-on-azure-machine-learning-workspace) documentation in which models are exclusively logged in Azure ML (single source of truth, only possibility when using Azure ML with public access disabled). This git repo also enhances [this](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-secure-online-endpoint​) documentation in which managed online endpoints with private endpoints are created with egress disabled.
 
 Steps to take:
 
