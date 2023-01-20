@@ -19,7 +19,7 @@ Steps to take:
 
 - Create an Azure ML with public access disabled. Make sure an Azure Container Registry is deployed with public access disabled. See [here](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-network-security-overview​)
 
-- Create a jumphost Data Science VM in the VNET in which Databricks deployed. Use subnet default to deploy the VM. See [here](https://learn.microsoft.com/en-us/azure/machine-learning/data-science-virtual-machine/provision-vm) to create a DSVM that already has Visual Studio Code, Docker Azure CLI preinstalled
+- Create a jumphost Data Science VM in the VNET in which Databricks deployed. Use subnet default to deploy the VM. See [here](https://learn.microsoft.com/en-us/azure/machine-learning/data-science-virtual-machine/provision-vm) to create a DSVM that already has Visual Studio Code, Docker Azure CLI preinstalled. Conceptually, jumphost can also be seen as Azure DevOps deployment agent in this architecture.
 
 - Log into the DSVM and make sure the az ml cli v2 extension is installed (az extension add -n ml)
 
